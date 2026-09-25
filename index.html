@@ -210,3 +210,59 @@ if('serviceWorker' in navigator && location.protocol!=='file:'){
 }
 </script>
 </body></html>
+<style>
+/* V6.4.7 — robust desktop library columns */
+@media (min-width:721px){
+  #gameList.list-mode:before{
+    content:"Juego                         Plataforma        Sesiones      Total (h)      Categoría      Estado      Acciones";
+    display:block; white-space:pre; font-size:11px; color:#5f6872;
+    background:#f3f5f7; border-radius:10px; padding:10px 14px;
+  }
+  #gameList.list-mode .row{
+    display:grid !important;
+    grid-template-columns:minmax(300px,1fr) 600px !important;
+    column-gap:24px !important;
+    align-items:center !important;
+    padding:13px 14px !important;
+    min-height:78px;
+  }
+  #gameList.list-mode .game-left{grid-column:1 !important;min-width:0}
+  #gameList.list-mode .game-right{
+    grid-column:2 !important;
+    width:600px !important;
+    min-width:600px !important;
+    display:grid !important;
+    grid-template-columns:130px 72px 90px 110px 54px 84px !important;
+    grid-template-rows:40px !important;
+    column-gap:12px !important;
+    align-items:center !important;
+    justify-items:stretch !important;
+    text-align:left !important;
+  }
+  #gameList.list-mode .desktop-platform{
+    grid-column:1 !important; display:block !important; padding-right:8px;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  #gameList.list-mode .desktop-sessions{
+    grid-column:2 !important; display:block !important; text-align:center !important;
+  }
+  #gameList.list-mode .game-hours{
+    grid-column:3 !important; display:block !important; text-align:right !important;
+    padding-right:4px; font-variant-numeric:tabular-nums;
+  }
+  #gameList.list-mode .category-badge{
+    grid-column:4 !important; justify-self:center !important; width:100px !important;
+    box-sizing:border-box; text-align:center !important;
+  }
+  #gameList.list-mode .game-finished{
+    grid-column:5 !important; display:flex !important; align-items:center !important;
+    justify-content:center !important; width:54px !important;
+  }
+  #gameList.list-mode .finished-star{color:#e6a700 !important;font-size:20px !important}
+  #gameList.list-mode .edit-game{
+    grid-column:6 !important; justify-self:end !important; width:72px !important;
+    height:32px !important; min-height:32px !important; margin:0 !important;
+    background:#eef0f3 !important; color:#3e444b !important;
+  }
+}
+</style>
