@@ -170,7 +170,7 @@
  #gameList.grid-mode .game-right{grid-template-columns:auto minmax(72px,1fr) 28px!important}
 }
 
-/* V6.4.12 — compact, aligned history date field */
+/* V6.4.13 — compact, aligned history date field */
 .history-filters .history-date-label input[type="date"]{
   -webkit-appearance:none!important;appearance:none!important;
   width:100%!important;height:44px!important;min-height:44px!important;max-height:44px!important;
@@ -344,4 +344,7 @@ if('serviceWorker' in navigator && location.protocol!=='file:'){
   .games-head::after{content:none}
   #gameList.list-mode{counter-reset:none}
 }
+
+/* V6.4.13 — finished star uses the same gold in list and grid views */
+#gameList .finished-star{color:#e6a700!important;text-shadow:none!important;}
 </style>
