@@ -170,7 +170,7 @@
  #gameList.grid-mode .game-right{grid-template-columns:auto minmax(72px,1fr) 28px!important}
 }
 
-/* V6.4.13 — compact, aligned history date field */
+/* V6.4.12 — compact, aligned history date field */
 .history-filters .history-date-label input[type="date"]{
   -webkit-appearance:none!important;appearance:none!important;
   width:100%!important;height:44px!important;min-height:44px!important;max-height:44px!important;
@@ -195,6 +195,9 @@
  .history-filters .history-date-label input[type="date"]::-webkit-date-and-time-value{font-size:16px!important;line-height:52px!important;}
  .history-filters .history-date-label input[type="date"]::-webkit-datetime-edit{min-height:50px!important;}
 }
+
+/* V6.4.14 — keep stable desktop table; only unify finished-star color in grid */
+#gameList.grid-mode .finished-star{color:#e6a700!important;text-shadow:0 1px 0 rgba(0,0,0,.06)!important;}
 </style><meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -344,7 +347,4 @@ if('serviceWorker' in navigator && location.protocol!=='file:'){
   .games-head::after{content:none}
   #gameList.list-mode{counter-reset:none}
 }
-
-/* V6.4.13 — finished star uses the same gold in list and grid views */
-#gameList .finished-star{color:#e6a700!important;text-shadow:none!important;}
 </style>
